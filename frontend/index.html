@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="header">
+        <h1>Appointment Scheduler</h1>
+      </header>
+      <div class="content">
+        <section class="date-section">
+          <h2>Choose Your Date</h2>
+          <input type="date" id="date-picker" class="date-input" />
+        </section>
+        <section id="slot-section" class="slot-section">
+          <h2>Available Time Slots</h2>
+          <div id="available-slots" class="slots-container"></div>
+        </section>
+        <section id="form-section" class="form-section hidden">
+          <h2>Your Details</h2>
+          <form id="booking-form" onsubmit="bookAppointment(event)">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                class="form-input"
+                placeholder="Enter your name"
+                required
+              />
+              <span id="name-error" class="error-message"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="text"
+                id="phone"
+                class="form-input"
+                placeholder="Enter your phone number"
+                required
+              />
+              <span id="phone-error" class="error-message"></span>
+            </div>
+            <button type="submit" class="btn-submit">Book Appointment</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
